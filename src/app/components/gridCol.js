@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import img from "../img2.jpg";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 

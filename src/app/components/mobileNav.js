@@ -6,7 +6,6 @@ import { useRouter, usePathname } from "next/navigation";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
 import logo from "../images/logo-black.png";
-import LinkWrapper from "./linkWrapper";
 import { gsap } from "gsap";
 
 function MobileNav({ setShowMobileNav }) {

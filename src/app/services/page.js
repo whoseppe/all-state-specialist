@@ -6,7 +6,7 @@ function page() {
   return (
     <div className="max-w-full">
       <div className="h-24 sm:h-12 w-full" />
-      <div className="">
+      <div className="p-3 sm:p-6">
         <HeaderTextSlide
           headline="Comprehensive Construction Services in Phoenix, Arizona: All
           State Specialists Turning Visions into Reality"

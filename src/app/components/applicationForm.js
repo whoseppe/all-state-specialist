@@ -44,7 +44,6 @@ const ApplicationForm = () => {
     axios
       .post("http://localhost:8080/api/submit", formData)
       .then((response) => {
-        console.log("here is response", response.data);
         setIsProcessing(false);
         setAppSubmitted(true);
         // Handle success or display a success message to the user

@@ -1,12 +1,10 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "./provider";
-import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import Link from "./link";
 import logo from "../images/logo-white.png";
 import LinkWrapper from "./linkWrapper";
-import MobileNav from "./mobileNav";
 function Nav() {
   let { setShowMobileNav } = useContext(AppContext);
 

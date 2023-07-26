@@ -3,24 +3,24 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 
 function MediaHeader() {
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      const tl = gsap.timeline();
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
+  //     const tl = gsap.timeline();
 
-      tl.from(".text-reveal", {
-        y: 100,
-        duration: 1.2,
-        ease: "power4.out",
-        delay: 1.5,
-        skewY: 7,
-        stagger: {
-          amount: 0.3,
-        },
-      });
-    });
+  //     tl.from(".text-reveal", {
+  //       y: 100,
+  //       duration: 1.2,
+  //       ease: "power4.out",
+  //       delay: 1.5,
+  //       skewY: 7,
+  //       stagger: {
+  //         amount: 0.3,
+  //       },
+  //     });
+  //   });
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <div className="relative bg-orange w-full h-screen">
@@ -33,20 +33,19 @@ function MediaHeader() {
       >
         <source src="/all-state.mov" type="video/mp4" />
       </video>
-      <div className="relative w-full h-full flex items-center justify-center z-20">
-        <div className="p-6">
-          <div className="h-18 sm:h-12 overflow-hidden">
-            <p className="text-reveal text-3xl font-bold text-center">
-              Welcome to{" "}
-              <span className="text-orange">All State Specialist LLC.</span>
+      <div className="relative w-full h-full z-20">
+        <div className="pl-3 sm:pl-6 pt-24">
+          <div className="overflow-hidden">
+            <p className="text-6xl lg:text-7xl font-bold">Welcome to </p>
+            <p className="text-orange text-6xl lg:text-7xl font-bold">
+              All State Specialist LLC.
             </p>
           </div>
-          <div className="overflow-hidden h-14">
-            <p className="text-reveal mt-2 text-center">
-              Your Trusted Partner for Construction Excellence in the Phoenix
-              Area!
-            </p>
-          </div>
+
+          <p className="mt-2">
+            Your Trusted Partner for Construction Excellence in the Phoenix
+            Area!
+          </p>
         </div>
       </div>
     </div>

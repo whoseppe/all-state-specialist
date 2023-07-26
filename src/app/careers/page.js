@@ -3,7 +3,6 @@ import MediaHeader from "../components/mediaHeader";
 import ApplicationForm from "../components/applicationForm";
 
 function page() {
-  console.log("HEREREE");
   return (
     <>
       <MediaHeader />
