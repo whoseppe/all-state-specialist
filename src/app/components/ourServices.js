@@ -1,50 +1,69 @@
 import React from "react";
-import Image from "next/image";
-import crane from "../img1.jpg";
-import people from "../img2.jpg";
+import loaderImage from "../images/loaderImage.jpg";
+import machineImage from "../images/machineImage.jpg";
+import concreteImage from "../images/concrete-min.jpg";
+import massGradingImage from "../images/mass-grading-min.jpg";
+import machine2Image from "../images/machine2Image.jpg";
+import wetUtilitiesImage from "../images/wet-utilities-min.jpg";
+import dryUtilitiesImage from "../images/dry-utilities-min.jpg";
+import structuresImages from "../images/structures-min.jpg";
+import asphaltImage from "../images/asphalt-min.jpg";
+import ButtonAction from "./buttonAction";
+import GridCol from "./gridCol";
+
 function OurServices() {
   return (
-    <div>
-      <div className="w-full flex items-center flex-nowrap space-x-4">
-        <p className="font-forum text-5xl text-center whitespace-nowrap pl-2 sm:pl-8">
-          Our Services
-        </p>
-        <div className="bg-orange h-1 w-full mt-3" />
+    <div className="w-full flex flex-col lg:flex-row md:p-6">
+      <div className="p-3 md:pr-4 md:w-96 flex-shrink-0">
+        <p className="font-forum text-5xl whitespace-nowrap">Our Services</p>
+        <div>
+          <p>
+            At All State Specialist LLC., we pride ourselves on offering a
+            diverse range of construction services to meet the needs of our
+            clients in the most efficient and cost-effective manner. With our
+            expertise and experience, we deliver exceptional results across
+            various sectors. Explore our comprehensive services below
+          </p>
+          <ButtonAction className="mt-4" route="/services" text="Learn More" />
+        </div>
       </div>
-      <div className="pl-2 sm:pl-8 max-w-md mt-2">
-        <p>
-          At All State Specialist LLC., we pride ourselves on offering a diverse
-          range of construction services to meet the needs of our clients in the
-          most efficient and cost-effective manner. With our expertise and
-          experience, we deliver exceptional results across various sectors.
-          Explore our comprehensive services below
-        </p>
-      </div>
-      <div className="h-96 flex flex-nowrap items-center pl-2 sm:pl-8 overflow-x-auto">
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0 relative">
-          <div className="absolute w-full h-full flex flex-col justify-end">
-            <div className="w-full bg-black bg-opacity-60 flex items-center justify-center py-3">
-              <p>YOOO</p>
-            </div>
-          </div>
-          <Image
-            src={crane}
-            className="w-full h-full object-cover"
-            alt="Picture of the author"
+      <div className="overflow-hidden h-screen pt-4 lg:pt-0">
+        <div className="w-full flex flex-nowrap justify-center overflow-hidden space-x-2">
+          <GridCol
+            endVal={-350}
+            images={[
+              loaderImage,
+              concreteImage,
+              structuresImages,
+              massGradingImage,
+              dryUtilitiesImage,
+              wetUtilitiesImage,
+            ]}
+          />
+          <GridCol
+            startVal={-700}
+            endVal={200}
+            images={[
+              dryUtilitiesImage,
+              machine2Image,
+              asphaltImage,
+              massGradingImage,
+              concreteImage,
+              wetUtilitiesImage,
+            ]}
+          />
+          <GridCol
+            endVal={-550}
+            images={[
+              wetUtilitiesImage,
+              asphaltImage,
+              machineImage,
+              structuresImages,
+              concreteImage,
+              dryUtilitiesImage,
+            ]}
           />
         </div>
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0">
-          <Image
-            src={people}
-            className="w-full h-full object-cover"
-            alt="Picture of the author"
-          />
-        </div>
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0"></div>
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0"></div>
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0"></div>
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0"></div>
-        <div className="h-80 w-[200px] m-2 bg-white shrink-0"></div>
       </div>
     </div>
   );

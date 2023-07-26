@@ -1,15 +1,12 @@
 import React from "react";
-import Nav from "../components/nav";
-import Footer from "../components/footer";
 import AboutHeader from "../components/aboutHeader";
-import Wrapper from "../components/wrapper";
 
 function page() {
   return (
-    <Wrapper>
+    <>
+      <div className="h-24 sm:h-16 w-full" />
       <AboutHeader />
-      <Footer />
-    </Wrapper>
+    </>
   );
 }
 

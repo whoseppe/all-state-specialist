@@ -1,12 +1,9 @@
 import React from "react";
-import Nav from "../components/nav";
-import Footer from "../components/footer";
 
 function page() {
   const AnyReactComponent = ({ text }) => <div>{text}</div>;
   return (
     <>
-      <Nav />
       <div className="h-24 sm:h-12 w-full" />
       <div className="p-2 sm:p-8 flex flex-col justify-center items-center w-full">
         <p className="opacity-20 font-bold whitespace-nowrap text-[8vw] tracking-[.5rem] sm:tracking-[1.5rem] text-center">
@@ -23,17 +20,22 @@ function page() {
             >
               All State Specialist LLC.
             </a>{" "}
-            or fill out the form below, and our dedicated team will be delighted
-            to assist you. Let's build something great together!
+            and our dedicated team will be delighted to assist you. Let's build
+            something great together!
           </p>
         </div>
-        <div className="border-[gray] border-t-2 border-b-2 py-6 flex flex-col justify-center items-center mt-12">
-          <p>Some Address, Phoenix,</p>
-          <p>Contact: 000-000-0000</p>
+        <div className="border-[gray] border-t-2 border-b-2 py-4 flex flex-row justify-center mt-12 space-x-10">
+          <div>
+            <p className="font-bold">Address</p>
+            <p>14155 N 83rd Ave</p>
+            <p>Peoria, AZ 85381</p>
+          </div>
+          <div>
+            <p className="font-bold">Contact</p>
+            <p>623-213-7180</p>
+          </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

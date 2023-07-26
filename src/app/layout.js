@@ -1,6 +1,7 @@
-// import Document, { Head } from "next/document";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import Nav from "./components/nav";
+import Footer from "./components/footer";
+import Provider from "./components/provider";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,10 +18,15 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Forum&family=Work+Sans:wght@400;700&display=swap"
           rel="stylesheet"
         />
-
         <link rel="stylesheet" href="styles.css" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Provider>
+          <Nav />
+          {children}
+          <Footer />
+        </Provider>
+      </body>
     </html>
   );
 }
