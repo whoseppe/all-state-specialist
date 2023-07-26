@@ -11,17 +11,17 @@ function page() {
         </p>
         <div className="flex items-center flex-wrap">
           <p className="max-w-lg font-bold text-center mt-4">
-            Whether you're eager to discuss your next exciting construction
-            project or simply have a burning question about our services, we're
-            here to hear from you! Drop us an email at{" "}
+            Whether you&apos;re eager to discuss your next exciting construction
+            project or simply have a burning question about our services,
+            we&apos;re here to hear from you! Drop us an email at{" "}
             <a
               className="underline text-orange"
               href="mailto:email@example.com"
             >
               All State Specialist LLC.
             </a>{" "}
-            and our dedicated team will be delighted to assist you. Let's build
-            something great together!
+            and our dedicated team will be delighted to assist you. Let&apos;s
+            build something great together!
           </p>
         </div>
         <div className="border-[gray] border-t-2 border-b-2 py-4 flex flex-row justify-center mt-12 space-x-10">

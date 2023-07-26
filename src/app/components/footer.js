@@ -7,7 +7,9 @@ function Footer() {
   return (
     <div className="w-full flex flex-col items-center justify-center mt-12 p-3 sm:p-6 pb-12">
       <div>
-        <p className="font-forum text-5xl text-center">Let's Work Together!</p>
+        <p className="font-forum text-5xl text-center">
+          Let&apos;s Work Together!
+        </p>
         <div className="flex items-center justify-center mt-4">
           <LinkWrapper route="/contact">
             <p className="text-orange">Contact Us</p>

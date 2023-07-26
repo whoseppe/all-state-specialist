@@ -36,10 +36,10 @@ function Reviews() {
     <div className="mt-6 w-full lg:w-96 max-w-sm relative">
       <div className="w-full h-full bg-orange absolute reveal" />
       <p>
-        “From start to finish, they delivered exceptional craftsmanship and
+        &quot;From start to finish, they delivered exceptional craftsmanship and
         ensured every aspect of the project was executed flawlessly. We are
         thrilled with the outcome and highly recommend All State Specialist LLC.
-        for their outstanding work!"
+        for their outstanding work!&quot;
       </p>
       <p className="font-bold">- Company Name</p>
       <div className="flex items-center space-x-1 mt-3">
