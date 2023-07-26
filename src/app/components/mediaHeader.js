@@ -1,34 +1,14 @@
-"use client";
-import React, { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 
 function MediaHeader() {
-  // useEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     const tl = gsap.timeline();
-
-  //     tl.from(".text-reveal", {
-  //       y: 100,
-  //       duration: 1.2,
-  //       ease: "power4.out",
-  //       delay: 1.5,
-  //       skewY: 7,
-  //       stagger: {
-  //         amount: 0.3,
-  //       },
-  //     });
-  //   });
-
-  //   return () => ctx.revert();
-  // }, []);
-
   return (
-    <div className="relative bg-orange w-full h-screen">
+    <div className="relative w-full h-screen">
       <div className="absolute w-full h-full bg-black-950 opacity-50 z-10" />
       <video
         loop
         autoPlay
         muted
+        playsInline
         className="absolute w-full h-full object-cover"
       >
         <source src="/all-state.mov" type="video/mp4" />
