@@ -12,12 +12,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const Loader = () => (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <p className="text-5xl font-bold">LOADER</p>
-    </div>
-  );
-
   return (
     <html lang="en">
       <head>

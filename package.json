@@ -9,9 +9,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "resolutions": {
-    "next-page-transitions/react-transition-group": "2.5.1"
-  },
   "dependencies": {
     "@formspree/react": "^2.4.4",
     "@googlemaps/react-wrapper": "^1.1.35",
@@ -20,11 +17,8 @@
     "axios": "^1.4.0",
     "eslint": "8.44.0",
     "eslint-config-next": "13.4.7",
-    "framer-motion": "^10.15.0",
-    "google-map-react": "^2.2.1",
     "gsap": "^3.12.2",
     "next": "13.4.7",
-    "next-page-transitions": "^1.0.0-beta.2",
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
