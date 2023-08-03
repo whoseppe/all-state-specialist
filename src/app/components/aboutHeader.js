@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 // TODO: CHANGE PHOTO, no above ground structures
 import people from "../img2.jpg";
-import safety from "../images/safety-action-min.jpg";
-import work from "../images/work.jpg";
-import client from "../images/client.jpg";
+import safety from "../../../public/safety-action-min.jpg";
+import work from "../../../public/work.jpg";
+import client from "../../../public/client.jpg";
 import HeaderTextSlide from "./headerTextSlide";
 import SlideUp from "./slideUp";
 

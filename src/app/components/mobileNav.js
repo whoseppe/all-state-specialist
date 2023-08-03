@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-import logo from "../images/logo-black.png";
+import logo from "../../../public/logo-black.png";
 import { gsap } from "gsap";
 
 function MobileNav({ setShowMobileNav }) {
@@ -146,9 +146,11 @@ function MobileNav({ setShowMobileNav }) {
               <MobileLink name="Contact" route="/contact" />
             </div>
           </div>
-          <p className="text-xs fade-in">
-            Copyright © 2023 All State Specialist LLC. All Rights Reserved.
-          </p>
+          <div className="pb-20">
+            <p className="text-xs fade-in">
+              Copyright © 2023 All State Specialist LLC. All Rights Reserved.
+            </p>
+          </div>
         </div>
       </div>
     </div>

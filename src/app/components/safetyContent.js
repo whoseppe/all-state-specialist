@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import saftey1 from "../images/safety-action-min.jpg";
-import saftey2 from "../images/safety-meeting-min.jpg";
-import saftey3 from "../images/complete-project-min.jpg";
+import saftey1 from "../../../public/safety-action-min.jpg";
+import saftey2 from "../../../public/safety-meeting-min.jpg";
+import saftey3 from "../../../public/complete-project-min.jpg";
 import SlideUp from "./slideUp";
 
 function SafetyContent() {

@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 
-import concreteImage from "../images/concrete-min.jpg";
-import massGradingImage from "../images/mass-grading-min.jpg";
-import wetUtilitiesImage from "../images/wet-utilities-min.jpg";
-import dryUtilitiesImage from "../images/dry-utilities-min.jpg";
-import structuresImages from "../images/structures-min.jpg";
-import asphaltImage from "../images/asphalt-min.jpg";
+import concreteImage from "../../../public/concrete-min.jpg";
+import massGradingImage from "../../../public/mass-grading-min.jpg";
+import wetUtilitiesImage from "../../../public/wet-utilities-min.jpg";
+import dryUtilitiesImage from "../../../public/dry-utilities-min.jpg";
+import structuresImages from "../../../public/structures-min.jpg";
+import asphaltImage from "../../../public/asphalt-min.jpg";
 
 import ServicesCard from "./servicesCard";
 

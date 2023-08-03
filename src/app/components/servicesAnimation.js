@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
-import droneImage from "../images/drone-view-min.jpg";
+import droneImage from "../../../public/drone-view-min.jpg";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { titleInEase } from "../utils";

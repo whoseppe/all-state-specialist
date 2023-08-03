@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useContext } from "react";
 import { AppContext } from "./provider";
 import Link from "./link";
-import logo from "../images/logo-white.png";
+import logo from "../../../public/logo-white.png";
 import LinkWrapper from "./linkWrapper";
 function Nav() {
   let { setShowMobileNav } = useContext(AppContext);
