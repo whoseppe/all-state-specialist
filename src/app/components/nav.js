@@ -1,8 +1,9 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useContext } from "react";
 import { AppContext } from "./provider";
-import Link from "./link";
+// import Link from "./link";
 import logo from "../../../public/logo-white.png";
 import LinkWrapper from "./linkWrapper";
 function Nav() {
@@ -12,7 +13,7 @@ function Nav() {
     <>
       <div className="fixed h-[70px] w-full z-40 -mt-1">
         <div className="w-full flex justify-between items-center p-2 md:pl-8 md:pr-8 h-[70px] bg-black-950">
-          <LinkWrapper route="/">
+          {/* <LinkWrapper route="/">
             <Image
               src={logo}
               className="h-12 w-32 object-contain"
@@ -26,8 +27,8 @@ function Nav() {
             <Link name="Safety" route="/safety" />
             <Link name="Careers" route="/careers" />
             <Link name="Contact" route="/contact" />
-          </div>
-
+          </div> */}
+          <Link href="/about">About Us</Link>
           <div
             onClick={() => setShowMobileNav(true)}
             className="pointer md:hidden p-6"
