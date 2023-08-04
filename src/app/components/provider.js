@@ -13,6 +13,15 @@ function Provider({ children }) {
   const [routeFlow, setRouteFlow] = useState([]);
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
+  const [showOnEveryPage, setShowOnEveryPage] = useState(true);
+
+  useEffect(() => {
+    if (window) {
+      if (window.innerWidth < 500) {
+        setShowOnEveryPage(false);
+      }
+    }
+  }, [window]);
 
   return (
     <AppContext.Provider
@@ -28,6 +37,7 @@ function Provider({ children }) {
       )}
       {showMobileNav && <MobileNav setShowMobileNav={setShowMobileNav} />}
       <OpenAnimation
+        showOnEveryPage={showOnEveryPage}
         setShowLoading={setShowLoading}
         showLoading={showLoading}
       />

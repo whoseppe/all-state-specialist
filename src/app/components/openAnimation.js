@@ -4,7 +4,7 @@ import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import gsap from "gsap";
 import { AppContext } from "./provider";
 
-function OpenAnimation({ setShowLoading, showLoading }) {
+function OpenAnimation({ setShowLoading, showLoading, showOnEveryPage }) {
   const router = useRouter();
   const [phrase, setPhrase] = useState("");
   const [firstComplete, setFirstComplete] = useState(false);
@@ -91,6 +91,10 @@ function OpenAnimation({ setShowLoading, showLoading }) {
     "Building Communities, Building Lives.",
     "Raising the Bar in Construction.",
   ];
+
+  console.log("showOnEveryPage", showOnEveryPage);
+
+  if (!showOnEveryPage && pathname !== "/") return null;
 
   if (!showLoading) return null;
 
