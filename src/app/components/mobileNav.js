@@ -40,41 +40,15 @@ function MobileNav({ setShowMobileNav }) {
   }, []);
 
   const close = (route) => {
-    if (pathname === route) return;
-    closeAnimation(route);
-    // setShouldClose(true);
+    if (pathname === route) {
+      closeAnimation();
+    } else {
+      // closeAnimation();
+      router.push(route);
+    }
   };
 
-  // useEffect(() => {
-  //   let ctx = gsap.context(() => {
-  //     if (shouldClose) {
-  //       gsap.to(".link-animate", {
-  //         y: 100,
-  //         skewY: 7,
-  //         duration: 0.8,
-  //         ease: "power2",
-  //         stagger: {
-  //           amount: 0.3,
-  //         },
-  //       });
-  //       gsap.to(".fade-in", {
-  //         opacity: 0,
-  //         duration: 1,
-  //         delay: 0.2,
-  //       });
-  //       gsap.to(containerRef.current, {
-  //         width: 0,
-  //         x: 20,
-  //         delay: 0.8,
-  //         onComplete: () => setShowMobileNav(false),
-  //       });
-  //     }
-  //   });
-
-  //   return () => ctx.revert();
-  // }, [pathname]);
-
-  const closeAnimation = (route, shouldRoute = true) => {
+  const closeAnimation = () => {
     gsap.to(".link-animate", {
       y: 100,
       skewY: 7,
@@ -94,9 +68,6 @@ function MobileNav({ setShowMobileNav }) {
       x: 20,
       delay: 0.8,
       onComplete: () => {
-        if (shouldRoute) {
-          router.push(route);
-        }
         setShowMobileNav(false);
       },
     });
@@ -107,7 +78,7 @@ function MobileNav({ setShowMobileNav }) {
       <div
         className={"h-22 overflow-hidden"}
         href={route}
-        onClick={() => closeAnimation(route)}
+        onClick={() => close(route)}
       >
         <div className="flex items-center cursor-pointer link-animate">
           <p
@@ -142,7 +113,7 @@ function MobileNav({ setShowMobileNav }) {
 
               <XMarkIcon
                 className="h-12 flex-shrink-0 w-12 text-blue-500"
-                onClick={() => closeAnimation("", false)}
+                onClick={() => closeAnimation()}
               />
             </div>
             <div className="flex flex-col space-y-2 mt-8">

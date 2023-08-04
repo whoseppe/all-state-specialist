@@ -1,14 +1,8 @@
 "use client";
-import React, {
-  createContext,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react";
+import React, { createContext, useState } from "react";
 import PageTransition from "./pageTransition";
 import MobileNav from "./mobileNav";
 import { usePathname } from "next/navigation";
-import OpenAnimation from "./openAnimation";
 
 export const AppContext = createContext();
 
@@ -18,15 +12,6 @@ function Provider({ children }) {
   const [routeFlow, setRouteFlow] = useState([]);
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
-  const [showOnEveryPage, setShowOnEveryPage] = useState(true);
-
-  useLayoutEffect(() => {
-    if (window) {
-      if (window.innerWidth < 500) {
-        setShowOnEveryPage(false);
-      }
-    }
-  }, [window]);
 
   return (
     <AppContext.Provider
@@ -35,17 +20,16 @@ function Provider({ children }) {
         setShowTransition,
         setRouteFlow,
         setShowMobileNav,
+        setShowLoading,
+        showLoading,
+        setShowMobileNav,
       }}
     >
       {showTransition && (
         <PageTransition routeFlow={routeFlow} setRouteFlow={setRouteFlow} />
       )}
       {showMobileNav && <MobileNav setShowMobileNav={setShowMobileNav} />}
-      <OpenAnimation
-        showOnEveryPage={showOnEveryPage}
-        setShowLoading={setShowLoading}
-        showLoading={showLoading}
-      />
+
       {children}
     </AppContext.Provider>
   );

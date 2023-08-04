@@ -1,9 +1,11 @@
 import React from "react";
+import OpenAnimation from "../components/openAnimation";
 
 function page() {
   const AnyReactComponent = ({ text }) => <div>{text}</div>;
   return (
     <>
+      <OpenAnimation />
       <div className="h-24 sm:h-12 w-full" />
       <div className="p-2 sm:p-8 flex flex-col justify-center items-center w-full">
         <p className="opacity-20 font-bold whitespace-nowrap text-[8vw] tracking-[.5rem] sm:tracking-[1.5rem] text-center">
