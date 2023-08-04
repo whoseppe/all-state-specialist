@@ -1,5 +1,10 @@
 "use client";
-import React, { createContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 import PageTransition from "./pageTransition";
 import MobileNav from "./mobileNav";
 import { usePathname } from "next/navigation";
@@ -15,7 +20,7 @@ function Provider({ children }) {
   const [showLoading, setShowLoading] = useState(true);
   const [showOnEveryPage, setShowOnEveryPage] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (window) {
       if (window.innerWidth < 500) {
         setShowOnEveryPage(false);
