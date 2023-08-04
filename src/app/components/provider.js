@@ -3,6 +3,7 @@ import React, { createContext, useEffect, useState } from "react";
 import PageTransition from "./pageTransition";
 import MobileNav from "./mobileNav";
 import { usePathname } from "next/navigation";
+import OpenAnimation from "./openAnimation";
 
 export const AppContext = createContext();
 
@@ -11,6 +12,7 @@ function Provider({ children }) {
   const [showTransition, setShowTransition] = useState(false);
   const [routeFlow, setRouteFlow] = useState([]);
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [showLoading, setShowLoading] = useState(true);
 
   return (
     <AppContext.Provider
@@ -25,7 +27,10 @@ function Provider({ children }) {
         <PageTransition routeFlow={routeFlow} setRouteFlow={setRouteFlow} />
       )}
       {showMobileNav && <MobileNav setShowMobileNav={setShowMobileNav} />}
-
+      <OpenAnimation
+        setShowLoading={setShowLoading}
+        showLoading={showLoading}
+      />
       {children}
     </AppContext.Provider>
   );

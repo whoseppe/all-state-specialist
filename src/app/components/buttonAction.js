@@ -1,23 +1,14 @@
-import React, { useContext } from "react";
-import { usePathname } from "next/navigation";
-import { AppContext } from "./provider";
+import React from "react";
+import { useRouter } from "next/navigation";
 
 function ButtonAction({ className, route, text }) {
-  const pathname = usePathname();
-  let { setShowTransition, showTransition, setRouteFlow } =
-    useContext(AppContext);
-
-  const navigate = () => {
-    if (showTransition) return;
-    setRouteFlow([pathname, route]);
-    setShowTransition(true);
-  };
+  const router = useRouter();
 
   return (
     <div className={className}>
       <button
         className="bg-orange text-white font-bold w-52 h-14 rounded-md"
-        onClick={() => navigate()}
+        onClick={() => router.push(route)}
       >
         {text}
       </button>
