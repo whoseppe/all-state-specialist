@@ -7,7 +7,11 @@ function page() {
   return (
     <>
       <OpenAnimation />
-      <MediaHeader />
+      <MediaHeader
+        header="Join Our Team at All State Specialist LLC"
+        subHeader="Building Futures, Together!"
+        desc="Explore exciting career opportunities in construction in Phoenix, Arizona and be a part of our dedicated team shaping a better tomorrow."
+      />
       <ApplicationForm />
     </>
   );

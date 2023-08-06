@@ -9,7 +9,12 @@ export default function Home() {
   return (
     <main>
       <OpenAnimation />
-      <MediaHeader />
+      <MediaHeader
+        header="Welcome to"
+        subHeader="All State Specialist LLC."
+        desc="Your Trusted Partner for Construction Excellence in the Phoenix
+            Area!"
+      />
       <Mission />
       <OurServices />
       <Reviews />

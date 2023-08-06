@@ -34,6 +34,7 @@ function AboutHeader() {
       <HeaderTextSlide
         headline="Unveiling Our Foundation of Expertise: Discover the All State Specialist LLC. Story!"
         orangeWords="All State Specialist LLC. Story!"
+        delay={2}
       />
       <div className="w-full flex flex-col items-center mt-28">
         <div>

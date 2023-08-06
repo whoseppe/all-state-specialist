@@ -14,6 +14,7 @@ function page() {
             headline="Comprehensive Construction Services in Phoenix, Arizona: All
           State Specialists Turning Visions into Reality"
             orangeWords="Services"
+            delay={2}
           />
         </div>
         <ServicesAnimation />

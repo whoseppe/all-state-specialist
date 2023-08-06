@@ -42,7 +42,10 @@ const ApplicationForm = () => {
     formData.append("file", emailData.file);
 
     axios
-      .post("http://localhost:8080/api/submit", formData)
+      .post(
+        `https://khfi5u2qszxdsof5msfb23srva0btpte.lambda-url.us-east-2.on.aws/api/submit`,
+        formData
+      )
       .then((response) => {
         setIsProcessing(false);
         setAppSubmitted(true);

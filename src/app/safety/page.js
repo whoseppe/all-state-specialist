@@ -13,6 +13,7 @@ function page() {
           headline="Safety is not just a rule, it's a
         culture. It should be woven into the fabric of every construction site."
           orangeWords="Safety"
+          delay={2}
         />
         <SafetyContent />
       </div>
