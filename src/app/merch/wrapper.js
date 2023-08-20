@@ -46,12 +46,14 @@ const Wrapper = ({ baseUrl, pass }) => {
                 you want to purchase.
               </p>
               <p className="text-xs text-center text-black-200">
-                - After selecting size and color (if applicable), click the "Add
-                to Cart" button for each item you want to purchase.
+                - After selecting size and color (if applicable), click the
+                &ldquo;Add to Cart&ldquo; button for each item you want to
+                purchase.
               </p>
               <p className="text-xs text-center text-black-200">
-                - From the cart page, click the "Checkout" or "Proceed to
-                Checkout" button to initiate the checkout process.
+                - From the cart page, click the &ldquo;Checkout&ldquo; or
+                &ldquo;Proceed to Checkout&ldquo; button to initiate the
+                checkout process.
               </p>
               <div className="px-4 py-2 border-2 border-black-200 rounded-2xl my-8">
                 <p className="font-bold text-black-200 text-center text-md">
