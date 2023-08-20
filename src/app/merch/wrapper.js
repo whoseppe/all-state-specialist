@@ -9,6 +9,7 @@ const Wrapper = ({ baseUrl, pass }) => {
   const [creds, setCreds] = useState("");
   const [error, setError] = useState(false);
   const [employeeId, setEmployeeId] = useState();
+  const [startCheckout, setStartCheckout] = useState(false);
 
   const addItemToCart = (newItem) => {
     setCart([...cart, newItem]);
@@ -28,6 +29,7 @@ const Wrapper = ({ baseUrl, pass }) => {
 
   return (
     <>
+      {!startCheckout && <div className="h-48 sm:h-48 w-full" />}
       {access ? (
         <>
           <Cart
@@ -35,6 +37,8 @@ const Wrapper = ({ baseUrl, pass }) => {
             setCart={setCart}
             baseUrl={baseUrl}
             employeeId={employeeId}
+            startCheckout={startCheckout}
+            setStartCheckout={setStartCheckout}
           />
           <p className="opacity-20 font-bold whitespace-nowrap text-[3vw] tracking-[.3rem] sm:tracking-[.5rem] text-center">
             All State Merchandise
