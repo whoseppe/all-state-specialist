@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import hat from "../../../public/hat_trucker_black.png";
 import SizePill from "./sizePill";
 
 const ProductCard = ({ itemData, addItemToCart }) => {
