@@ -1,8 +1,9 @@
 "use client";
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import PageTransition from "./pageTransition";
 import MobileNav from "./mobileNav";
 import { usePathname } from "next/navigation";
+import Lenis from "@studio-freight/lenis";
 
 export const AppContext = createContext();
 
@@ -12,6 +13,21 @@ function Provider({ children }) {
   const [routeFlow, setRouteFlow] = useState([]);
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [showLoading, setShowLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const lenis = new Lenis();
+
+  //   lenis.on("scroll", (e) => {
+  //     console.log(e);
+  //   });
+
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   return (
     <AppContext.Provider

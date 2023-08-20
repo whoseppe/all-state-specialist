@@ -8,7 +8,7 @@ function page() {
     <>
       <OpenAnimation />
       <MediaHeader />
-      <ApplicationForm />
+      <ApplicationForm baseUrl={process.env.BASE} />
     </>
   );
 }

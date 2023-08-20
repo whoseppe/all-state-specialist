@@ -2,7 +2,6 @@ import React from "react";
 import OpenAnimation from "../components/openAnimation";
 
 function page() {
-  const AnyReactComponent = ({ text }) => <div>{text}</div>;
   return (
     <>
       <OpenAnimation />

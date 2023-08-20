@@ -103,7 +103,7 @@ function ServicesAnimation() {
       <div className="flex flex-col items-center justify-center pinned">
         <div
           ref={letterWrapperRef}
-          className="overflow-hidden h-44 w-full flex flex-nowrap justify-center my-32"
+          className="overflow-hidden sm:h-44 md:h-56 lg:h-64 w-full flex flex-nowrap justify-center my-32"
         >
           {letters.map((i, index) => (
             <p

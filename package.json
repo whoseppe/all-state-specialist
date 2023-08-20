@@ -13,6 +13,7 @@
     "@formspree/react": "^2.4.4",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@heroicons/react": "^2.0.18",
+    "@studio-freight/lenis": "^1.0.19",
     "autoprefixer": "10.4.14",
     "axios": "^1.4.0",
     "eslint": "8.44.0",

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { DocumentCheckIcon } from "@heroicons/react/24/solid";
 
-const ApplicationForm = () => {
+const ApplicationForm = ({ baseUrl }) => {
   const [isProcessing, setIsProcessing] = useState(false);
   const [appSubmitted, setAppSubmitted] = useState(false);
   const [fileUploaded, setFileUploaded] = useState(false);
@@ -42,7 +42,7 @@ const ApplicationForm = () => {
     formData.append("file", emailData.file);
 
     axios
-      .post("http://localhost:8080/api/submit", formData)
+      .post(`${baseUrl}/application`, formData)
       .then((response) => {
         setIsProcessing(false);
         setAppSubmitted(true);

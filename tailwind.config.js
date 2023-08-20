@@ -21,9 +21,9 @@ module.exports = {
         900: "#313131",
         950: "#1f1f1f",
       },
-
       white: "#F2F2F2",
       orange: "#FD6A3F",
+      red: "#ef4444",
     },
     extend: {
       backgroundImage: {
