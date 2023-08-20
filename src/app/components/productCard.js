@@ -63,8 +63,9 @@ const ProductCard = ({ itemData, addItemToCart }) => {
 
       <div className="mt-2">
         <div className="flex items-center">
-          {sizes.map((item) => (
+          {sizes.map((item, index) => (
             <SizePill
+              key={index + item}
               size={item}
               selectedSize={selectedSize}
               setSelectedSize={setSelectedSize}
@@ -76,7 +77,10 @@ const ProductCard = ({ itemData, addItemToCart }) => {
           <p className="max-w-sm text-black-500">{desc}</p>
           <div>
             {features.map((item) => (
-              <p className="font-bold text-xs text-black-500"> - {item}</p>
+              <p key={item} className="font-bold text-xs text-black-500">
+                {" "}
+                - {item}
+              </p>
             ))}
           </div>
         </div>
@@ -84,7 +88,7 @@ const ProductCard = ({ itemData, addItemToCart }) => {
           <p className="font-bold">{colors[colorIndex].label}</p>
           <div className="flex items-center">
             {colors.map((item, index) => (
-              <Colors color={item.hex} index={index} />
+              <Colors key={index + item.hex} color={item.hex} index={index} />
             ))}
           </div>
         </div>
