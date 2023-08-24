@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
+import ScrollDown from "./scrollDown";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function MediaHeader() {
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(".mouse", {
+        duration: 1,
+        opacity: 0,
+        scrollTrigger: {
+          ease: "power4.out",
+          trigger: ".mouse",
+          start: "bottom center",
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="relative w-full h-screen">
       <div className="absolute w-full h-full bg-black-950 opacity-50 z-10" />
@@ -27,6 +48,9 @@ function MediaHeader() {
             Area!
           </p>
         </div>
+      </div>
+      <div className="absolute bottom-1 w-full mouse">
+        <ScrollDown />
       </div>
     </div>
   );

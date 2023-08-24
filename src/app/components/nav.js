@@ -62,6 +62,14 @@ function Nav() {
             >
               Contact
             </Link>
+            <Link
+              className={`${
+                pathname === "contact" ? "text-orange" : ""
+              } font-bold`}
+              href="/merch"
+            >
+              Merch
+            </Link>
           </div>
 
           <div

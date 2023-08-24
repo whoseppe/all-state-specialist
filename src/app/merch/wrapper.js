@@ -10,6 +10,7 @@ const Wrapper = ({ baseUrl, pass }) => {
   const [error, setError] = useState(false);
   const [employeeId, setEmployeeId] = useState();
   const [startCheckout, setStartCheckout] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   const addItemToCart = (newItem) => {
     setCart([...cart, newItem]);
@@ -28,7 +29,7 @@ const Wrapper = ({ baseUrl, pass }) => {
   };
 
   return (
-    <>
+    <div className="p-2 sm:p-8">
       {!startCheckout && <div className="h-48 sm:h-48 w-full" />}
       {access ? (
         <>
@@ -39,6 +40,8 @@ const Wrapper = ({ baseUrl, pass }) => {
             employeeId={employeeId}
             startCheckout={startCheckout}
             setStartCheckout={setStartCheckout}
+            showCart={showCart}
+            setShowCart={setShowCart}
           />
           <p className="opacity-20 font-bold whitespace-nowrap text-[3vw] tracking-[.3rem] sm:tracking-[.5rem] text-center">
             All State Merchandise
@@ -76,8 +79,11 @@ const Wrapper = ({ baseUrl, pass }) => {
                 {merch.map((item) => (
                   <ProductCard
                     key={item.title}
+                    cartItems={cart}
                     addItemToCart={addItemToCart}
                     itemData={item}
+                    showCart={showCart}
+                    setShowCart={setShowCart}
                   />
                 ))}
               </div>
@@ -86,15 +92,17 @@ const Wrapper = ({ baseUrl, pass }) => {
         </>
       ) : (
         <div className="w-full flex justify-center items-center">
-          <div className="w-full  max-w-lg">
-            <p className="text-xl font-bold py-4">
-              This page is reserved for employees only. Please enter your
-              credentials to continue.
+          <div className="w-full  max-w-2xl pt-32 pb-32">
+            <p className="text-3xl">
+              This page is reserved for employees only 😎
             </p>
-            <div className="w-full flex items-center space-x-2">
+            <p className="text-lg py-4 font-bold">
+              Please enter your credentials to continue
+            </p>
+            <div className="w-full flex flex-wrap sm:flex-nowrap items-center sm:space-x-2">
               <input
                 required
-                className="bg-black-800 rounded-full text-white py-3 pl-3 ring-0 outline-0 w-full"
+                className="bg-black-800 rounded-full text-white py-3 pl-5 ring-0 outline-0 w-full"
                 type="text"
                 name="role"
                 value={creds}
@@ -105,7 +113,7 @@ const Wrapper = ({ baseUrl, pass }) => {
                 placeholder="Add Credentials..."
               />
               <div
-                className="w-44 py-3 bg-orange flex justify-center items-center rounded-full cursor-pointer"
+                className="w-full mt-4 sm:mt-0 sm:w-44 py-3 bg-orange flex justify-center items-center rounded-full cursor-pointer"
                 onClick={() => validate()}
               >
                 <p className="font-bold">Submit</p>
@@ -121,7 +129,7 @@ const Wrapper = ({ baseUrl, pass }) => {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

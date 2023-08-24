@@ -45,7 +45,6 @@ function Provider({ children }) {
         <PageTransition routeFlow={routeFlow} setRouteFlow={setRouteFlow} />
       )}
       {showMobileNav && <MobileNav setShowMobileNav={setShowMobileNav} />}
-
       {children}
     </AppContext.Provider>
   );

@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function GridCol({ startVal = 0, endVal, images }) {
   const imgRef = useRef();
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.fromTo(

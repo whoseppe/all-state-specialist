@@ -3,7 +3,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import SizePill from "./sizePill";
 
-const ProductCard = ({ itemData, addItemToCart }) => {
+const ProductCard = ({
+  itemData,
+  addItemToCart,
+  setShowCart,
+  showCart,
+  cartItems,
+}) => {
   const { id, title, price, desc, sizes, features, colors, images, type } =
     itemData;
   const [selectedSize, setSelectedSize] = useState("sm");
@@ -19,6 +25,9 @@ const ProductCard = ({ itemData, addItemToCart }) => {
   };
 
   const addToCart = () => {
+    if (cartItems.length === 0 && !showCart) {
+      setShowCart(true);
+    }
     setItemAdded(true);
     setTimeout(() => {
       setItemAdded(false);

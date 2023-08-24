@@ -13,7 +13,7 @@ import GridCol from "./gridCol";
 
 function OurServices() {
   return (
-    <div className="w-full flex flex-col lg:flex-row md:p-6">
+    <div className="w-full flex flex-col justify-center lg:flex-row md:p-6">
       <div className="p-3 md:pr-4 md:w-96 flex-shrink-0">
         <p className="font-forum text-5xl whitespace-nowrap">Our Services</p>
         <div>

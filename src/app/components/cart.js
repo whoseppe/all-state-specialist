@@ -12,8 +12,9 @@ const Cart = ({
   employeeId,
   startCheckout,
   setStartCheckout,
+  showCart,
+  setShowCart,
 }) => {
-  const [showCart, setShowCart] = useState(false);
   const [processing, setProcessing] = useState(false);
   const [checkoutSuccess, setCheckoutSuccess] = useState(false);
   const [checkoutFail, setCheckoutFail] = useState(false);
@@ -135,7 +136,7 @@ const Cart = ({
     setProcessing(true);
     axios
       .post(`${baseUrl}/merch`, {
-        data: [...cartItems, { employeeId: employeeId }],
+        data: { items: cartItems, employeeId },
       })
       .then((response) => {
         setProcessing(false);
