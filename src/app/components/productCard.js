@@ -61,7 +61,7 @@ const ProductCard = ({
 
   return (
     <div className="m-4">
-      <div className="w-96">
+      <div className="w-64 lg:w-96">
         <Image
           src={images[colorIndex]}
           className="w-full h-full object-cover p-1 rounded-xl"
