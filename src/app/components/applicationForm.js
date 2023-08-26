@@ -28,7 +28,6 @@ const ApplicationForm = ({ baseUrl }) => {
     setEmailData({ ...emailData, file: file });
     setFileUploaded(true);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsProcessing(true);
