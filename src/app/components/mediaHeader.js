@@ -1,6 +1,9 @@
+"use client";
 import React, { useLayoutEffect } from "react";
+import Image from "next/image";
 import ScrollDown from "./scrollDown";
 import { gsap } from "gsap";
+import logo from "../../../public/logo-white.png";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -34,18 +37,16 @@ function MediaHeader() {
       >
         <source src="/all-state.mov" type="video/mp4" />
       </video>
-      <div className="relative w-full h-full z-20">
-        <div className="pl-3 sm:pl-6 pt-24">
-          <div className="overflow-hidden">
-            <p className="text-6xl lg:text-7xl font-bold">Welcome to </p>
-            <p className="text-orange text-6xl lg:text-7xl font-bold">
-              All State Specialist LLC.
-            </p>
-          </div>
-
-          <p className="mt-2">
-            Your Trusted Partner for Construction Excellence in the Phoenix
-            Area!
+      <div className="relative w-full h-full flex flex-col items-center justify-center z-20">
+        <div className="-mt-24 flex flex-col items-center w-full">
+          <Image
+            src={logo}
+            className="h-full w-48 lg:w-1/6 max-w-xl object-contain lg:mb-10"
+            alt="Picture of the author"
+          />
+          <p className="text-2xl lg:text-5xl font-bold text-center max-w-3xl">
+            Your <span className="text-orange">Trusted Partner</span> for
+            Construction Excellence in the Phoenix Area!
           </p>
         </div>
       </div>

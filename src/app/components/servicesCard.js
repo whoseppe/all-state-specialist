@@ -31,7 +31,7 @@ function ServicesCard({ title, image, body, reverse }) {
         reverse ? "flex-row-reverse" : ""
       }`}
     >
-      <div className="h-full w-full lg:w-1/2 relative">
+      <div className="h-full w-full lg:w-1/2 max-w-7xl relative">
         <div ref={overlayRef} className="w-full h-full absolute bg-black-950" />
         <Image
           src={image}
@@ -40,7 +40,7 @@ function ServicesCard({ title, image, body, reverse }) {
         />
       </div>
 
-      <div className="w-full lg:w-1/2 mt-4 lg:mt-0 lg:px-4 flex flex-col justify-between">
+      <div className="w-full lg:w-1/2 max-w-7xl mt-4 lg:mt-0 lg:px-4 flex flex-col justify-between">
         <div>
           <p className="font-forum text-6xl">{title}</p>
           <p className="mt-2 text-sm opacity-80">{body}</p>

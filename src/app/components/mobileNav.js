@@ -126,6 +126,8 @@ function MobileNav({ setShowMobileNav }) {
               <MobileLink name="Careers" route="/careers" />
 
               <MobileLink name="Contact" route="/contact" />
+
+              <MobileLink name="Merch" route="/merch" />
             </div>
           </div>
           <div className="pb-20">

@@ -103,12 +103,12 @@ function ServicesAnimation() {
       <div className="flex flex-col items-center justify-center pinned">
         <div
           ref={letterWrapperRef}
-          className="overflow-hidden sm:h-44 md:h-56 lg:h-64 w-full flex flex-nowrap justify-center my-32"
+          className="overflow-hidden h-32 sm:h-44 lg:h-58 w-full flex flex-nowrap justify-center my-32"
         >
           {letters.map((i, index) => (
             <p
               key={i + index}
-              className={`text-[12vw] font-forum uppercase ${
+              className={`text-5xl sm:text-7xl md:text-7xl lg:text-[200px] font-forum uppercase ${
                 i === "u" || i === "c" ? "flip-letter text-orange" : "text1"
               } ${i === "" ? "ml-4" : ""} ${
                 index % 2 === 0 ? "text-slide-up" : "text-slide-down"

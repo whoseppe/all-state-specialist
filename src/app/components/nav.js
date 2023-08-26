@@ -56,7 +56,7 @@ function Nav() {
             </Link>
             <Link
               className={`${
-                pathname === "contact" ? "text-orange" : ""
+                pathname === "/contact" ? "text-orange" : ""
               } font-bold`}
               href="/contact"
             >
@@ -64,7 +64,7 @@ function Nav() {
             </Link>
             <Link
               className={`${
-                pathname === "contact" ? "text-orange" : ""
+                pathname === "/merch" ? "text-orange" : ""
               } font-bold`}
               href="/merch"
             >

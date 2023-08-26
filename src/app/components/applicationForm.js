@@ -113,7 +113,7 @@ const ApplicationForm = ({ baseUrl }) => {
                   <label className="w-full">
                     <p className="font-bold mb-2">
                       <span className="text-orange font-bold">* </span>Desired
-                      Role:{" "}
+                      Position:{" "}
                     </p>
                     <input
                       required
