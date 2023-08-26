@@ -135,9 +135,12 @@ const Cart = ({
   const checkout = () => {
     setProcessing(true);
     axios
-      .post(`${baseUrl}/merch`, {
-        data: { items: cartItems, employeeId },
-      })
+      .post(
+        `https://all-state-server-837c9210fde1.herokuapp.com/api/submit/merch`,
+        {
+          data: { items: cartItems, employeeId },
+        }
+      )
       .then((response) => {
         setProcessing(false);
         setCheckoutSuccess(true);

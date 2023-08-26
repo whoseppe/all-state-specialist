@@ -41,7 +41,10 @@ const ApplicationForm = ({ baseUrl }) => {
     formData.append("file", emailData.file);
 
     axios
-      .post(`${baseUrl}/application`, formData)
+      .post(
+        `https://all-state-server-837c9210fde1.herokuapp.com/api/submit/application`,
+        formData
+      )
       .then((response) => {
         setIsProcessing(false);
         setAppSubmitted(true);
