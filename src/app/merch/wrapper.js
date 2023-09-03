@@ -20,7 +20,7 @@ const Wrapper = ({ baseUrl, pass }) => {
     if (creds === "") return;
     setError(false);
     const prefix = pass;
-    if (creds.startsWith(prefix)) {
+    if (creds.toLowerCase().startsWith(prefix)) {
       setEmployeeId(creds.substring(prefix.length));
       setAccess(true);
     } else {
@@ -31,16 +31,18 @@ const Wrapper = ({ baseUrl, pass }) => {
   return (
     <div>
       {!startCheckout && <div className="h-48 sm:h-48 w-full" />}
-      <Cart
-        cartItems={cart}
-        setCart={setCart}
-        baseUrl={baseUrl}
-        employeeId={employeeId}
-        startCheckout={startCheckout}
-        setStartCheckout={setStartCheckout}
-        showCart={showCart}
-        setShowCart={setShowCart}
-      />
+      {access && (
+        <Cart
+          cartItems={cart}
+          setCart={setCart}
+          baseUrl={baseUrl}
+          employeeId={employeeId}
+          startCheckout={startCheckout}
+          setStartCheckout={setStartCheckout}
+          showCart={showCart}
+          setShowCart={setShowCart}
+        />
+      )}
       <div className="p-2 sm:p-8">
         {access ? (
           <>

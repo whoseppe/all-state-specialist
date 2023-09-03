@@ -28,7 +28,7 @@ function SafetyContent() {
 
   return (
     <div className="w-full flex flex-col justify-center items-center mt-28">
-      <p className="mt-20 mb-40 text-4xl sm:max-w-3xl">
+      <p className="mt-20 mb-40 text-2xl lg:text-4xl sm:max-w-3xl">
         At All State Specialist LLC,
         <span className="font-bold text-orange">
           {" "}

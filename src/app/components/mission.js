@@ -30,7 +30,7 @@ function Mission() {
         <p className="font-bold text-lg text-center mt-6 slide-text">
           Constructing Excellence, Every Project, Every Time!
         </p>
-        <p className="text-center text-4xl sm:max-w-3xl mt-4 slide-text">
+        <p className="text-center text-2xl lg:text-4xl sm:max-w-3xl mt-4 slide-text">
           At All State Specialist LLC, we are on a mission to redefine
           <span className="font-bold text-orange"> excellence</span> in the
           construction industry. With unwavering commitment, we craft each

@@ -35,7 +35,7 @@ function Reviews() {
   const Review = ({ review, reviewType }) => (
     <div className="mt-6 w-full max-w-lg relative">
       <div className="w-full h-full bg-orange absolute reveal" />
-      <p className="text-lg">&quot;{review}&quot;</p>
+      <p className="text-sm lg:text-lg">&quot;{review}&quot;</p>
       <p className="font-bold">- {reviewType}</p>
       <div className="flex items-center space-x-1 mt-3">
         <StarIcon className="h-7 w-7 text-orange" />

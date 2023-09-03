@@ -246,7 +246,12 @@ const Cart = ({
               <div
                 className="bg-orange px-8 py-3 rounded-full mr-4 cursor-pointer"
                 onClick={
-                  !cartItems.length ? null : () => setStartCheckout(true)
+                  !cartItems.length
+                    ? null
+                    : () => {
+                        setStartCheckout(true);
+                        setShowCart(false);
+                      }
                 }
               >
                 <p className="text-black-950 font-bold">Checkout</p>
